@@ -1,4 +1,4 @@
-# Tony Kipchirchir | Engineering Portfolio Website
+# Tony Kipchirchir Portfolio Website
 
 Welcome to my personal portfolio repository. This website serves as a showcase of my skills, projects, and interactive simulations in the domains of embedded systems, hardware engineering, and telecommunications.
 
