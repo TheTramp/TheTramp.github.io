@@ -1,0 +1,53 @@
+[
+  {
+    "id": "vlc",
+    "isFeatured": true,
+    "title": "High-Speed Visible Light Transceiver",
+    "category": "Optoelectronics // Project 01",
+    "tags": ["C++", "Analog Design", "Telecomm"],
+    "imagePath": "./vlc_transceiver.png",
+    "repoUrl": "https://github.com/TheTramp/vlc-transceiver",
+    "overview": "Designed and fabricated a real-time Visible Light Communication (VLC) transceiver capable of realtime HD Video transmission using high-speed LED modulation and photodiode-based signal reception. Developed an analog optical receiver front-end using a BPW34 photodiode and OPA380 transimpedance amplifier for MHz-range light signal detection and conditioning.",
+    "architecture": "[Rpi4 Tx Baseband] ─(UART)─> [TC4420 MOSFET Driver] -> [IRLZ44N MOSFET] -> [LED] ─(Optical Light)─> [BPW34 Photodiode] ─> [OPA380 TIA Stage] ─> [LMV7219 Comparator] ─(UART)─> [Rpi4 Rx]",
+    "specifications": [
+      "BPW34 PIN photodiode reverse-biased.",
+      "Texas Instruments OPA380 high-speed, transimpedance operational amplifier converting microamp photocurrent to voltage.",
+      "LMV7219 high-speed comparator squaring output wave logic levels to match Raspberry Pi 3.3V logic profiles.",
+      "Custom C++ baseband driver directly polling Raspberry Pi 4B registers for raw low-latency bitstreams."
+    ]
+  },
+  {
+    "id": "tdr",
+    "isFeatured": false,
+    "title": "Underground Cable Fault Detection System",
+    "category": "Diagnostics // Project 02",
+    "tags": ["Embedded C", "Time-Domain Reflectometry", "PCB Testing"],
+    "imagePath": "",
+    "repoUrl": "https://github.com/TheTramp/cable-fault-detection",
+    "overview": "Developed a portable diagnostic hardware prototype utilizing signal pulse reflection principles (similar to Time-Domain Reflectometry) to precisely pinpoint short and open circuit faults in buried infrastructure. Programmed an embedded microcontroller to interpret voltage drops and calculate exact distance-to-fault metrics, significantly reducing the manual labor required for physical network troubleshooting.",
+    "architecture": "[Pulse Generator] ─(Signal Pulse)─> [Damaged Cable Under Test]\n                                            │ (Reflection)\n[Microcontroller ADC] ◄── [Signal Conditioning] ◄┘",
+    "specifications": [
+      "Custom signal generator producing nanosecond pulses onto the transmission line.",
+      "High-speed analog capturing conditioning circuit with op-amps and clamping diodes.",
+      "Microcontroller timer capture registry to record transmission and arrival reflection times.",
+      "LCD indicator displaying calculated distance-to-fault and cable impedance changes."
+    ]
+  },
+  {
+    "id": "iot",
+    "isFeatured": false,
+    "title": "IoT-Based Secure Access & Data Logging System",
+    "category": "Embedded Systems // Project 03",
+    "tags": ["C++", "ESP32 Wi-Fi", "RFID Protocols"],
+    "imagePath": "",
+    "repoUrl": "https://github.com/TheTramp/iot-secure-access",
+    "overview": "Engineered a localized hardware access control prototype bridging serial sensor inputs with cloud-based monitoring. Integrated RFID authentication with a Wi-Fi-enabled microcontroller to execute real-time, encrypted database logging, ensuring secure, authorized-only facility access and traceable personnel telemetry.",
+    "architecture": "[RFID Reader RC522] ──(SPI)──> [ESP32 Wi-Fi Micro] ──(Secure HTTPS)──> [Database Logging Server]\n                                                │ (GPIO)\n                                                ▼\n                                          [Solenoid Door Lock Relays]",
+    "specifications": [
+      "MFRC522 13.56 MHz RFID reader module driving SPI serial interface.",
+      "ESP32 Wi-Fi enabled controller running secure web client sessions.",
+      "Optocoupler-isolated relay switching circuits driving electrical solenoid deadbolt locks.",
+      "Real-time clock integration for accurate time-stamping of local database entries."
+    ]
+  }
+]

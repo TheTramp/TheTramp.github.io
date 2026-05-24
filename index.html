@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Kipchirchir | Graduate Electrical & Electronics Engineer Portfolio</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- MathJax for rendering engineering formulas -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="text-slate-200 antialiased font-sans min-h-screen">
+
+    <!-- Navigation Header -->
+    <nav class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-900">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <span class="relative flex h-3 w-3">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-3 w-3 bg-cyan-500"></span>
+                </span>
+                <span class="font-mono font-bold text-lg tracking-wider text-white">TK // <span class="text-cyan-400">ENGINEERING</span></span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-semibold tracking-wide">
+                <a href="#about" class="text-slate-400 hover:text-white transition duration-200">About</a>
+                <a href="#oscilloscope" class="text-slate-400 hover:text-white transition duration-200">Scope Simulator</a>
+                <a href="#vlc-sandbox" class="text-slate-400 hover:text-white transition duration-200">VLC Sandbox</a>
+                <a href="#skills-matrix" class="text-slate-400 hover:text-white transition duration-200">Skills Map</a>
+                <a href="#projects-section" class="text-slate-400 hover:text-white transition duration-200">Projects</a>
+                <a href="#connect" class="text-slate-400 hover:text-white transition duration-200">Connect</a>
+            </div>
+
+            <div>
+                <a href="https://github.com/TheTramp" target="_blank" class="border border-cyan-500/30 hover:border-cyan-400 hover:bg-cyan-500/10 text-cyan-400 text-xs uppercase tracking-wider font-mono font-bold px-4 py-2 rounded transition duration-200">
+                    GitHub Profile
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH INTEGRATED OSCILLOSCOPE -->
+    <header id="about" class="relative pt-12 pb-24 px-6 border-b border-slate-900 overflow-hidden">
+        <div class="container mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Bio Column (Left) -->
+            <div class="lg:col-span-5 space-y-6">
+                <div class="inline-flex items-center space-x-2 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-full text-xs font-mono text-cyan-400">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 led-active"></span>
+                    <span>GRADUATE ENGINEER // PORTFOLIO</span>
+                </div>
+                
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-none">
+                    Tony <br class="hidden lg:block"><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-400 to-indigo-400">Kipchirchir</span>
+                </h1>
+                
+                <h2 class="text-lg md:text-xl font-mono text-slate-400">
+                    Graduate Electrical & Electronics Engineer <br>
+                    <span class="text-slate-500">B.Sc. Machakos University // Telecommunications</span>
+                </h2>
+                
+                <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                    I am an Electrical & Electronics Engineering graduate who enjoys building electronic hardware. My work has taken me from component-level troubleshooting to analog front-ends, signal processing and microcontrollers. I am passionate about hardware design, telecommunications, digital signal processing and embedded design.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects-section" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-6 py-3 rounded-lg text-sm transition duration-200 shadow-lg shadow-cyan-500/20">
+                        View Projects
+                    </a>
+                    <a href="./Tony Kipchirchir.pdf" download class="bg-slate-900 hover:bg-slate-850 border border-slate-800 hover:border-slate-700 text-white font-mono px-5 py-3 rounded-lg text-sm transition duration-200 flex items-center space-x-2">
+                        <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                        <span>Download CV</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Interactive Oscilloscope Panel (Right) -->
+            <div id="oscilloscope" class="lg:col-span-7">
+                <div class="backdrop-blur-md bg-slate-900/40 border border-slate-800 rounded-xl overflow-hidden shadow-2xl relative">
+                    <!-- Top bezel of instrument -->
+                    <div class="bg-slate-950 px-4 py-2 border-b border-slate-880 flex justify-between items-center text-xs font-mono text-slate-400">
+                        <div class="flex items-center space-x-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 led-active"></span>
+                            <span>OSCILLOSCOPE-SIM v1.0 // SENSORS READY</span>
+                        </div>
+                        <div class="space-x-3 text-[10px] text-slate-500">
+                            <span>CH1: ACTIVE</span>
+                            <span>TRIG: AUTO</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Screen Area -->
+                    <div class="relative p-4 bg-slate-950">
+                        <canvas id="scopeCanvas" width="600" height="260" class="w-full h-64 bg-slate-950 rounded-lg border border-slate-900 cursor-crosshair"></canvas>
+                        
+                        <!-- Telemetry Overlay Grid -->
+                        <div class="absolute bottom-6 left-8 flex space-x-4 bg-slate-950/80 backdrop-blur border border-slate-850 p-2 rounded text-[10px] font-mono text-cyan-400">
+                            <div>Vpp: <span id="readVpp" class="text-white">--</span></div>
+                            <div>Vrms: <span id="readVrms" class="text-white">--</span></div>
+                            <div>Freq: <span id="readFreq" class="text-white">--</span></div>
+                            <div>Period: <span id="readPeriod" class="text-white">--</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Control Bezel Panel -->
+                    <div class="bg-slate-950/90 border-t border-slate-850 p-5 grid grid-cols-1 md:grid-cols-4 gap-6 text-xs font-mono">
+                        <!-- Wave Select -->
+                        <div class="space-y-2">
+                            <label class="text-slate-400 uppercase tracking-wider text-[10px]">Signal Generator</label>
+                            <div class="grid grid-cols-2 gap-1.5">
+                                <button onclick="setWave('sine')" id="btn-sine" class="px-2 py-1 bg-cyan-500/20 text-cyan-400 border border-cyan-500/30 rounded text-center text-[10px] uppercase font-bold transition">Sine</button>
+                                <button onclick="setWave('square')" id="btn-square" class="px-2 py-1 bg-slate-900 text-slate-500 border border-slate-800 rounded text-center text-[10px] uppercase font-bold transition">Square</button>
+                                <button onclick="setWave('triangle')" id="btn-triangle" class="px-2 py-1 bg-slate-900 text-slate-500 border border-slate-800 rounded text-center text-[10px] uppercase font-bold transition">Triangle</button>
+                                <button onclick="setWave('noise')" id="btn-noise" class="px-2 py-1 bg-slate-900 text-slate-500 border border-slate-800 rounded text-center text-[10px] uppercase font-bold transition">Noise</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Frequency slider -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-[10px]">
+                                <span class="text-slate-400">FREQ (kHz)</span>
+                                <span id="valFreq" class="text-cyan-400">5.0</span>
+                            </div>
+                            <input id="slideFreq" type="range" min="1" max="15" step="0.2" value="5" class="w-full accent-cyan-500 h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                        </div>
+
+                        <!-- Amplitude slider -->
+                        <div class="space-y-1.5">
+                            <div class="flex justify-between text-[10px]">
+                                <span class="text-slate-400">AMP (V)</span>
+                                <span id="valAmp" class="text-cyan-400">3.0</span>
+                            </div>
+                            <input id="slideAmp" type="range" min="10" max="80" value="40" class="w-full accent-cyan-500 h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                        </div>
+
+                        <!-- Utility Controls -->
+                        <div class="space-y-2">
+                            <label class="text-slate-400 uppercase tracking-wider text-[10px] block">Trigger Mode</label>
+                            <div class="flex space-x-2">
+                                <button id="btn-freeze" onclick="toggleFreeze()" class="flex-1 px-2.5 py-1.5 border border-slate-800 bg-slate-900 text-slate-400 rounded hover:border-slate-700 transition text-[10px] text-center uppercase font-bold">
+                                    Freeze
+                                </button>
+                                <button id="btn-grid" onclick="toggleGrid()" class="flex-1 px-2.5 py-1.5 border border-cyan-500/20 bg-cyan-950/20 text-cyan-400 rounded transition text-[10px] text-center uppercase font-bold">
+                                    Grid: On
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
+    <!-- VISIBLE LIGHT COMMUNICATION SANDBOX -->
+    <section id="vlc-sandbox" class="py-20 px-6 border-b border-slate-900 bg-slate-950/30">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center space-y-4 mb-16">
+                <div class="inline-flex items-center space-x-2 bg-pink-950/30 border border-pink-500/30 px-3 py-1 rounded-full text-xs font-mono text-pink-400">
+                    <span class="w-2 h-2 rounded-full bg-pink-500 led-active"></span>
+                    <span>OPTICAL WIRELESS SIMULATOR</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">VLC Optical Transmission Laboratory</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+                    Simulate a physical Visible Light Communication transceiving system. Input a text payload to watch character streams convert, code with 4B5B, pulse an optical transmitter, and decode at the photodiode in real-time.
+                </p>
+            </div>
+
+            <!-- Simulation Panel -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+                <!-- Transmitter (Tx) Bezel -->
+                <div class="lg:col-span-4 bg-slate-900/60 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-base font-bold text-white font-mono uppercase tracking-wider">Transmitter (Tx)</h3>
+                            <span class="text-[10px] font-mono text-slate-500 bg-slate-950 px-2 py-0.5 rounded">Rpi 4B Baseband</span>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono text-slate-400 block">Input Character Payload (A-Z, space, 0-9):</label>
+                                <input type="text" id="vlcInput" value="HELLO" uppercase maxlength="8" class="w-full bg-slate-950 border border-slate-800 focus:border-cyan-500 rounded p-3 text-white font-mono tracking-widest text-center text-lg uppercase outline-none transition">
+                            </div>
+                            
+                            <div class="space-y-2">
+                                <label class="text-xs font-mono text-slate-400 block">Modulation Clock Speed</label>
+                                <div class="flex items-center space-x-3">
+                                    <input id="vlcSpeed" type="range" min="1" max="15" value="5" class="flex-grow accent-pink-500 h-1 bg-slate-800 rounded-lg appearance-none cursor-pointer">
+                                    <span id="vlcSpeedRead" class="text-xs font-mono text-pink-400 w-12 text-right">5 Hz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="startVlcTransmission()" id="btn-vlc-tx" class="w-full py-3 bg-pink-600 hover:bg-pink-500 text-slate-950 font-mono font-bold uppercase rounded-lg tracking-wider text-xs transition duration-200 glow-magenta">
+                            Tx: Trigger Optical Stream
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Channel / Propagation Wave (Center) -->
+                <div class="lg:col-span-4 bg-slate-950 border border-slate-900 p-6 rounded-xl flex flex-col justify-between items-center min-h-[300px]">
+                    <h4 class="text-xs font-mono text-slate-500 uppercase tracking-widest">Free-Space Optical Link</h4>
+                    
+                    <!-- LED & Detector Visual Alignment -->
+                    <div class="w-full flex items-center justify-between relative my-8">
+                        <!-- Transmitter LED -->
+                        <div class="flex flex-col items-center z-10">
+                            <div id="txLed" class="w-16 h-16 rounded-full border-2 border-slate-800 bg-slate-900 flex items-center justify-center transition-all duration-75">
+                                <span class="text-[10px] font-mono text-slate-500">LED</span>
+                            </div>
+                            <span class="text-[9px] font-mono text-slate-500 mt-2">GaAs Transmitter</span>
+                        </div>
+                        
+                        <!-- Optical Path & Pulses -->
+                        <div class="flex-grow h-1 bg-slate-900 mx-4 relative overflow-hidden rounded">
+                            <div id="opticalSignal" class="absolute inset-0 bg-pink-500/10 transition-opacity"></div>
+                            <!-- Flying photon -->
+                            <div id="photonBeam" class="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pink-400 glow-magenta hidden"></div>
+                        </div>
+
+                        <!-- Receiver Photodiode -->
+                        <div class="flex flex-col items-center z-10">
+                            <div id="rxPd" class="w-16 h-16 rounded-full border-2 border-slate-850 bg-slate-900 flex items-center justify-center transition-all duration-75">
+                                <span class="text-[10px] font-mono text-slate-500">RX</span>
+                            </div>
+                            <span class="text-[9px] font-mono text-slate-500 mt-2">BPW34 Detector</span>
+                        </div>
+                    </div>
+
+                    <!-- Telemetry Display panel -->
+                    <div class="w-full bg-slate-900 border border-slate-850 rounded p-4 font-mono text-xs space-y-1 text-slate-400">
+                        <div class="flex justify-between">
+                            <span>Status:</span>
+                            <span id="vlcStatus" class="text-white">STANDBY</span>
+                        </div>
+                        <div class="flex justify-between text-[11px]">
+                            <span>Current Bit:</span>
+                            <span id="vlcBit" class="text-cyan-400 font-bold">--</span>
+                        </div>
+                        <div class="flex justify-between text-[11px] overflow-hidden text-ellipsis whitespace-nowrap">
+                            <span>Tx Buff (4B5B):</span>
+                            <span id="vlcTxBuffer" class="text-slate-500 text-[10px]">--</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Receiver (Rx) Bezel -->
+                <div class="lg:col-span-4 bg-slate-900/60 border border-slate-800 p-6 rounded-xl flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-6">
+                            <h3 class="text-base font-bold text-white font-mono uppercase tracking-wider">Receiver (Rx)</h3>
+                            <span class="text-[10px] font-mono text-slate-500 bg-slate-950 px-2 py-0.5 rounded">OPA380 TIA</span>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="space-y-2">
+                                <span class="text-xs font-mono text-slate-400 block">Received Frame Bitstream:</span>
+                                <div id="vlcBitStream" class="bg-slate-950 border border-slate-850 rounded p-3 text-xs font-mono h-20 overflow-y-auto break-all text-cyan-400/80 leading-normal">
+                                    // Awaiting frame sync pulses...
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <span class="text-xs font-mono text-slate-400 block">Decoded ASCII Payload:</span>
+                                <div id="vlcDecoded" class="bg-slate-950 border border-slate-850 text-white font-mono text-2xl tracking-widest text-center font-bold p-3 rounded h-16 flex items-center justify-center">
+                                    --
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-6">
+                        <button onclick="clearVlcSandbox()" class="w-full py-2.5 bg-slate-950 border border-slate-800 hover:border-slate-700 text-slate-400 font-mono text-xs uppercase rounded transition">
+                            Reset Lab Instruments
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TECHNICAL ARSENAL (SKILLS MATRIX) -->
+    <section id="skills-matrix" class="py-20 px-6 border-b border-slate-900">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center space-y-4 mb-16">
+                <div class="inline-flex items-center space-x-2 bg-cyan-950/30 border border-cyan-500/30 px-3 py-1 rounded-full text-xs font-mono text-cyan-400">
+                    <span class="w-2 h-2 rounded-full bg-cyan-500 led-active"></span>
+                    <span>TECHNICAL SYSTEM SCHEMATIC</span>
+                </div>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white">Interactive Systems Block Map</h2>
+                <p class="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+                    Click each engineering subsystem block to explore my technical capabilities, instrumentation, tools, and software languages applied in each domain.
+                </p>
+            </div>
+
+            <!-- Block Schematic Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-stretch mb-8">
+                <!-- Block 1 -->
+                <div onclick="selectSkillBlock('embedded')" id="block-embedded" class="p-6 bg-slate-900 border-2 border-cyan-500/30 rounded-xl cursor-pointer hover:border-cyan-400 hover:bg-slate-850/50 transition shadow-lg glow-cyan text-left">
+                    <div class="font-mono text-cyan-400 text-xs mb-2">01 // EMBED_SYS</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Embedded Systems</h3>
+                    <p class="text-slate-400 text-xs">Firmware coding, timer registers, logic mapping, serial protocols (I2C/SPI/UART), hardware interrupts.</p>
+                </div>
+                
+                <!-- Block 2 -->
+                <div onclick="selectSkillBlock('hardware')" id="block-hardware" class="p-6 bg-slate-900 border border-slate-850 rounded-xl cursor-pointer hover:border-cyan-400 hover:bg-slate-850/50 transition text-left">
+                    <div class="font-mono text-slate-500 text-xs mb-2">02 // HW_ENG</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Hardware Engineering</h3>
+                    <p class="text-slate-400 text-xs">Analog conditioning, board diagnostics, schematic tracing, SMD rework, circuit simulation packages.</p>
+                </div>
+                
+                <!-- Block 3 -->
+                <div onclick="selectSkillBlock('telecom')" id="block-telecom" class="p-6 bg-slate-900 border border-slate-850 rounded-xl cursor-pointer hover:border-cyan-400 hover:bg-slate-850/50 transition text-left">
+                    <div class="font-mono text-slate-500 text-xs mb-2">03 // TELE_SYS</div>
+                    <h3 class="text-lg font-bold text-white mb-2">Telecommunications</h3>
+                    <p class="text-slate-400 text-xs">VLC transceivers, line coding logic, signal integrity, RF measurements, VSWR testing, channel budgets.</p>
+                </div>
+            </div>
+
+            <!-- Block Description Detail Screen -->
+            <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-8 min-h-[220px]">
+                <div id="skill-detail-content" class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-8 space-y-4">
+                        <h4 id="skill-detail-title" class="text-2xl font-bold text-white">Embedded Systems Engineering</h4>
+                        <p id="skill-detail-desc" class="text-slate-400 text-sm leading-relaxed">
+                            Bridging physical signals with computational logic. Skilled in low-level firmware development, microcontroller clock timer registers, hardware interrupts, and serial communication links. Proficient in optimizing sensor integration and analog-to-digital conversions on AVR and ARM core platforms.
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2" id="skill-detail-tags">
+                            <span class="bg-slate-950 text-cyan-400 border border-slate-850 text-xs px-3 py-1.5 rounded font-mono">Embedded C / C++</span>
+                            <span class="bg-slate-950 text-cyan-400 border border-slate-850 text-xs px-3 py-1.5 rounded font-mono">ATmega328P / AVR</span>
+                            <span class="bg-slate-950 text-cyan-400 border border-slate-850 text-xs px-3 py-1.5 rounded font-mono">Raspberry Pi</span>
+                            <span class="bg-slate-950 text-cyan-400 border border-slate-850 text-xs px-3 py-1.5 rounded font-mono">Register-Level Programming</span>
+                            <span class="bg-slate-950 text-cyan-400 border border-slate-850 text-xs px-3 py-1.5 rounded font-mono">UART / SPI / I2C Protocols</span>
+                            <span class="bg-slate-950 text-cyan-400 border border-slate-850 text-xs px-3 py-1.5 rounded font-mono">Hardware Interrupt Vectors</span>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 border-l border-slate-800 pl-8 space-y-4 font-mono text-xs">
+                        <div>
+                            <span class="text-slate-500 block mb-1 uppercase tracking-wider text-[10px]">Instrumentation / Lab Gear</span>
+                            <span id="skill-detail-gear" class="text-slate-350">Microcontrollers, Logic Analyzer, Serial Oscilloscope Interfacing, Jumper Logic Probes</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-500 block mb-1 uppercase tracking-wider text-[10px]">Primary Tools / Simulators</span>
+                            <span id="skill-detail-tools" class="text-slate-350">VS Code, Arduino IDE, PlatformIO, Linux GCC, CMake compilation systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DYNAMIC PROJECTS SECTION -->
+    <section id="projects-section" class="py-20 px-6 bg-slate-950/30">
+        <div class="container mx-auto max-w-6xl">
+            
+            <div class="flex items-center space-x-3 mb-12">
+                <div class="h-0.5 w-12 bg-cyan-500"></div>
+                <h2 class="text-3xl font-extrabold text-white">Engineering Project Portfolio</h2>
+            </div>
+
+            <!-- Featured Project Target Container -->
+            <div id="featured-project-container" class="mb-16">
+                <!-- Loaded dynamically by app.js -->
+                <div class="p-6 bg-slate-900 border border-slate-800 rounded-xl text-center font-mono text-slate-400 text-xs uppercase tracking-widest animate-pulse">
+                    // Synchronizing optoelectronic database...
+                </div>
+            </div>
+
+            <!-- Other Projects Target Grid -->
+            <div id="other-projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Loaded dynamically by app.js -->
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SLEEK DIRECT CONNECT PANEL (REPLACED CONTACT FORM) -->
+    <section id="connect" class="py-20 px-6 border-t border-slate-900 bg-slate-950/20">
+        <div class="container mx-auto max-w-4xl">
+            <div class="backdrop-blur-md bg-slate-900/40 border border-slate-800 rounded-2xl p-8 md:p-12 shadow-2xl relative">
+                <div class="absolute -top-3.5 left-8 px-4 bg-slate-950 border border-slate-800 text-[10px] font-mono text-cyan-400 rounded-full py-1">
+                    PORT_STATE: OPEN_FOR_INQUIRIES
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-6 space-y-6">
+                        <h3 class="text-2xl md:text-3xl font-bold text-white tracking-wide">Let's build together.</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            I am actively seeking junior engineering roles, graduate internships, or collaborative ventures. Reach out directly through any of these communication pins:
+                        </p>
+                        <div class="font-mono text-xs space-y-2 text-slate-500">
+                            <div>// LATENCY: 0.04ms</div>
+                            <div>// ROUTE: DIRECT_CELLULAR_AND_NET</div>
+                        </div>
+                    </div>
+                    
+                    <div class="md:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <!-- Email Link -->
+                        <a href="mailto:kipchirchir.tony@outlook.com" class="p-4 bg-slate-950 hover:bg-slate-900 border border-slate-850 hover:border-cyan-500/40 rounded-xl flex items-center space-x-3 group transition duration-300">
+                            <div class="p-2 bg-slate-900 group-hover:bg-cyan-500/10 rounded-lg transition">
+                                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-[9px] font-mono text-slate-500 uppercase">Email Pin</span>
+                                <span class="text-xs font-bold text-white truncate max-w-[140px] block">kipchirchir.tony</span>
+                            </div>
+                        </a>
+
+                        <!-- LinkedIn Link -->
+                        <a href="https://linkedin.com/in/tonykipchirchir" target="_blank" class="p-4 bg-slate-950 hover:bg-slate-900 border border-slate-850 hover:border-cyan-500/40 rounded-xl flex items-center space-x-3 group transition duration-300">
+                            <div class="p-2 bg-slate-900 group-hover:bg-cyan-500/10 rounded-lg transition">
+                                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-[9px] font-mono text-slate-500 uppercase">LinkedIn</span>
+                                <span class="text-xs font-bold text-white block">tonykipchirchir</span>
+                            </div>
+                        </a>
+
+                        <!-- GitHub Link -->
+                        <a href="https://github.com/TheTramp" target="_blank" class="p-4 bg-slate-950 hover:bg-slate-900 border border-slate-850 hover:border-cyan-500/40 rounded-xl flex items-center space-x-3 group transition duration-300">
+                            <div class="p-2 bg-slate-900 group-hover:bg-cyan-500/10 rounded-lg transition">
+                                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-[9px] font-mono text-slate-500 uppercase">GitHub Repo</span>
+                                <span class="text-xs font-bold text-white block">TheTramp</span>
+                            </div>
+                        </a>
+
+                        <!-- Phone Link -->
+                        <a href="tel:+254704679909" class="p-4 bg-slate-950 hover:bg-slate-900 border border-slate-850 hover:border-cyan-500/40 rounded-xl flex items-center space-x-3 group transition duration-300">
+                            <div class="p-2 bg-slate-900 group-hover:bg-cyan-500/10 rounded-lg transition">
+                                <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            </div>
+                            <div>
+                                <span class="block text-[9px] font-mono text-slate-500 uppercase">Voice Line</span>
+                                <span class="text-xs font-bold text-white block">+254704679909</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-500 py-12 text-center text-xs font-mono border-t border-slate-900/60">
+        <div class="container mx-auto px-6 space-y-4">
+            <p>&copy; 2026 Tony Kipchirchir. Engineered with precision.</p>
+            <p class="text-[10px] text-slate-650 tracking-widest">// LATENCY: 0.04ms // TEMP: 32C // CLK: 3.2GHz // CORE: OK</p>
+        </div>
+    </footer>
+
+    <!-- MODULAR SCRIPTS -->
+    <script src="./oscilloscope.js"></script>
+    <script src="./vlc-simulator.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
